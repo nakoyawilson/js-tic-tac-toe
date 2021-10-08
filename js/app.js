@@ -70,6 +70,7 @@ playAgain.addEventListener("click", (e) => {
         location.reload();
     } else if (e.target.classList.contains("no")) {
         thanks.style.display = "block";
+        document.querySelector(".yes").disabled = "true";
     }
 })
 
@@ -83,7 +84,6 @@ function checkForWinner(symbol) {
         }
         for (let button of allButtons) {
             button.disabled = "true";
-            document.querySelector(".yes").disabled = "true";
         }
         playAgain.style.display = "block";
     }
